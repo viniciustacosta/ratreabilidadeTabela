@@ -1,23 +1,47 @@
 <div class="card">
-    <p-treeTable [value]="files" [scrollable]="true" [tableStyle]="{'min-width':'50rem'}">
-        <ng-template pTemplate="header">
-            <tr>
-                <th>Name</th>
-                <th>Size</th>
-                <th>Type</th>
-                <th>Teste</th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
-            <tr [ttRow]="rowNode">
-                <td>
-                    <p-treeTableToggler [rowNode]="rowNode" />
-                    {{ rowData.name }}
-                </td>
-                <td>{{ rowData.size }}</td>
-                <td>{{ rowData.type }}</td>
-                <td>{{ rowData.teste }}</td>
-            </tr>
-        </ng-template>
-    </p-treeTable>
+  <p-treeTable
+    [value]="files"
+    [scrollable]="true"
+    [tableStyle]="{'min-width':'100rem'}"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Local</th>
+        <th>CodProduto</th>
+        <th>Nome</th>
+        <th>Lote</th>
+        <th>Data</th>
+        <th>Doc</th>
+        <th>Nota</th>
+        <th>OC</th>
+        <th>Origem</th>
+        <th>Destino</th>
+        <th>Obs</th>
+        <th>Mov</th>
+        <th>Qtd</th>
+        <th>Saldo</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+      <tr [ttRow]="rowNode">
+        <td>
+          <p-treeTableToggler [rowNode]="rowNode" />
+          {{ rowData.Local }}
+        </td>
+        <td>{{rowData.CodProduto}}</td>
+        <td>{{rowData.Nome}}</td>
+        <td>{{rowData.Lote}}</td>
+        <td>{{rowData.Data}}</td>
+        <td>{{rowData.Doc}}</td>
+        <td>{{rowData.Nota}}</td>
+        <td>{{rowData.OC}}</td>
+        <td>{{rowData.Origem}}</td>
+        <td>{{rowData.Destino}}</td>
+        <td>{{rowData.Obs}}</td>
+        <td>{{rowData.Mov}}</td>
+        <td>{{rowData.Qtd}}</td>
+        <td>{{rowData.Saldo}}</td>
+      </tr>
+    </ng-template>
+  </p-treeTable>
 </div>
